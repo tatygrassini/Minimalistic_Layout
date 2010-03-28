@@ -1,7 +1,6 @@
 html {
-	 background: #cacaca url(../i/bg.png) no-repeat top right; 
-/*	background: transparent url(../i/12_col.gif) repeat-y top center;
-*/}
+/* 	 background: #cacaca url(../i/bg.png) no-repeat top right;  */
+	background: transparent url(../i/12_col.gif) repeat-y top center;}
 	
 body {
 	color: #313131;
@@ -16,76 +15,92 @@ body {
 
 #header {
 	margin-top: 0;
+	position: relative;
 }
 
 	#header #logo {
-/*		border: 1px solid black;*/
+		float: left;
 	}
 	
 	
 	#header #inner {
 		background: transparent url(../i/hr-line.png) repeat-x center;
+		min-height: 95px;
+		overflow: hidden;
+		float: right;
+		width: 640px;
 	
 	}
+
+
 	/*	--- NAVIGATION --- */
 	
-	#header #nav ul {
-		display: block;
+	#header ul#nav {
 		list-style-position: outside;
+		display: block;
+		float: left;
 	}
 	
-		#header #nav li {
+	#header ul#nav ul {
+		display: block;
+		position: absolute;
+		top: 67px;
+		}
+
+		#header ul#nav li {
 			display: inline;
-			float: left;
-			list-style: none;
 			margin: 0 10px;
 		}
 		
-			#header #nav li:first-child {
+			#header ul#nav li:first-child {
 				margin-left: 0px;
 			}
 			
-			#header #nav li:last-child {
+			#header ul#nav li:last-child {
 				margin-right: 0px;
 			}
 
 		
-			#header #nav li a {
-				text-decoration: none;
-				color: #525252;
-				font-size: 17px;
-				font-weight: bold;
-				letter-spacing: -0.7px;
-			}
-			
-			#header #nav li.selected a {
-				text-decoration: underline;
-			}
+				#header ul#nav li a {
+					text-decoration: none;
+					color: #525252;
+					font-size: 17px;
+					font-weight: bold;
+					letter-spacing: -0.7px;
+				}
+				
+				#header ul#nav li.selected a {
+					text-decoration: underline;
+				}
+				
+				#header ul#nav li.selected ul li a {
+					color: #787878;
+					text-decoration: none;
+				}
+
 
 
 
 	/*	--- SEARCH FIELD AND BUTTON --- */
 
 	
-		#header #search ul {
+		#header ul#search {
 			float: right;
 		}
 		
-			#header #search ul li {
+			#header ul#search li {
 				list-style: none;
 				float: left;
 				margin-left: -4px;
 			}
 
-		#header #search input.input {
+		#header ul#search input.input {
 			background: #bfbfbf;
 			color: #e7e7e7;
 			font-size: 14px;
 			font-weight: bold;
-			-moz-border-radius-bottomleft: 5px;
-			-moz-border-radius-topleft: 5px;
-			-webkit-border-radius-bottomleft: 5px;
-			-webkit-border-radius-topleft: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
 			border: 1px solid #ababab;
 			width: 156px;
 			height: 18px;
@@ -93,7 +108,7 @@ body {
 			padding-left: 10px;
 		}
 
-		#header #search input.submit {
+		#header ul#search input.submit {
 			background: transparent url(../i/search-button.png) no-repeat scroll top center;
 			color: #dddddd;
 			font-size: 20px;
@@ -108,6 +123,7 @@ body {
 	/*	--- FEATURED --- */
 	
 	#featured {
+		clear: both;
 		padding-top: 50px;
 		
 	}
@@ -146,6 +162,8 @@ body {
 				-moz-border-radius: 5px;
 				-webkit-border-radius: 5px;
 			}
+			
+/* 			BAJAR UN PDF CON TODAS LAS ESPECIFICACIONES DE WEBKIT PARA LOS BORDES EN CSS3 */
 
 
 
