@@ -1,3 +1,7 @@
+@import url('reset.css');
+@import url('960.css');
+@import url('text.css');
+
 html {
 /* 	 background: #cacaca url(../i/bg.png) no-repeat top right;  */
 	background: transparent url(../i/12_col.gif) repeat-y top center;}
@@ -99,10 +103,12 @@ body {
 			color: #e7e7e7;
 			font-size: 14px;
 			font-weight: bold;
-			-moz-border-radius: 5px;
-			-webkit-border-radius: 5px;
+			-moz-border-radius-topleft : 5px;
+			-moz-border-radius-bottomleft: 5px;
+			-webkit-border-top-left-radius: 5px;
+			-webkit-border-bottom-left-radius: 5px;
 			border: 1px solid #ababab;
-			width: 156px;
+			width: 137px;
 			height: 18px;
 			line-height: 20px; 
 			padding-left: 10px;
@@ -120,50 +126,99 @@ body {
 			cursor: pointer;
 		}
 
-	/*	--- FEATURED --- */
-	
-	#featured {
+	/*	--- SLIDESHOW --- */
+
+	#slideshow {
 		clear: both;
 		padding-top: 50px;
-		
 	}
 	
-		#featured #text {
-			/*margin-left: 60px;*/
+		#slideshow-container {
+			width: 820px;
+			margin: 0 auto;
+		}
+		
+				#slide h3 {
+					font-size: 20px;
+					color: #2197b1;
+				}
+			
+				#slide h4 {
+					font-size: 17px;
+					color: #313131;
+				}
+			
+				#slide p {
+					font-size: 14px;
+					line-height: 25px;
+				}
+			
+				#slide img {
+					border-width: 3px;
+					border-style: solid;
+					border-color: #31aeca;
+					float:right;
+					-moz-border-radius: 5px;
+					-webkit-border-radius: 5px;
+				}
 
-		}
-	
-			#featured h3 {
-				font-size: 20px;
-				color: #2197b1;
-			}
-		
-			#featured h4 {
-				font-size: 17px;
-				color: #313131;
-			}
-		
-			#featured p {
-				font-size: 14px;
-				line-height: 25px;
-			}
-		
-		#featured #img {
-/*			margin-right: 60px;*/
-/*			border: 1px solid black;*/
-			
-		}
-		
-			#featured #img img {
-				border-width: 3px;
-				border-style: solid;
-				border-color: #31aeca;
-				float:right;
-				-moz-border-radius: 5px;
-				-webkit-border-radius: 5px;
-			}
-			
-/* 			BAJAR UN PDF CON TODAS LAS ESPECIFICACIONES DE WEBKIT PARA LOS BORDES EN CSS3 */
+
+        .slider {
+            width: 820px;
+            height: 17px;
+/*
+            margin-top: 140px;
+            margin-left: 5px;
+            padding: 1px;
+*/
+            position: relative;
+            background: url(../i/hr-line.png) repeat-x center;
+        }
+        
+        .handle {
+            position: absolute;
+            cursor: move;
+            height: 17px;
+            width: 17px;
+            top: 0;
+            background: url(../i/handle.png) no-repeat;
+            z-index: 100;
+        }
+
+        .slider span {
+/*
+            color: #bbb;
+            font-size: 80%;
+*/
+            cursor: pointer;
+            position: absolute;
+            z-index: 110;
+            top: 3px;
+        }
+        
+        .slider-1 {
+            left: 0px;
+        }
+        
+        .slider-2 {
+            left: 160px;
+        }
+
+        .slider-3 {
+            left: 320px;
+        }
+        
+        .slider-4 {
+            left: 480px;
+        }
+
+        .slider-5 {
+            left: 640px;
+        }
+
+        .slider-6 {
+            left: 800px;
+        }
 
 
 
