@@ -84,47 +84,40 @@ body {
 
 
 
+	/*	--- SEARCH --- */
 
-	/*	--- SEARCH FIELD AND BUTTON --- */
-
-	
-		#header ul#search {
-			float: right;
+	#header #search {
+		float: right;
+	}
+			
+		#header #search p#newsletter-input {
+					display:block;
+					height: 22px;
+					width: 177;
+					background: url("../i/search-bg.png") no-repeat scroll right top transparent;
 		}
-		
-			#header ul#search li {
-				list-style: none;
-				float: left;
-				margin-left: -4px;
+	
+			#header #search  #newsletter-email {
+				margin-left: 15px;
+				width: 127px;
+				background: none;
+				border:none;
+				color: #e7e7e7;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			#header #search #newsletter-submit {
+				margin-left: 5px;
+				width: 30px;
+				height: 22px;
+				background: none;
+				border: none;
+				text-indent:-9999px;
 			}
 
-		#header ul#search input.input {
-			background: #bfbfbf;
-			color: #e7e7e7;
-			font-size: 14px;
-			font-weight: bold;
-			-moz-border-radius-topleft : 5px;
-			-moz-border-radius-bottomleft: 5px;
-			-webkit-border-top-left-radius: 5px;
-			-webkit-border-bottom-left-radius: 5px;
-			border: 1px solid #ababab;
-			width: 137px;
-			height: 18px;
-			line-height: 20px; 
-			padding-left: 10px;
 		}
 
-		#header ul#search input.submit {
-			background: transparent url(../i/search-button.png) no-repeat scroll top center;
-			color: #dddddd;
-			font-size: 20px;
-			font-weight: bold;
-			border:none;
-			width: 30px;
-			height: 22px;
-			line-height: 22px;
-			cursor: pointer;
-		}
+
 
 	/*	--- SLIDESHOW --- */
 
