@@ -3,8 +3,9 @@
 @import url('text.css');
 
 html {
-/* 	 background: #cacaca url(../i/bg.png) no-repeat top right;  */
-	background: transparent url(../i/12_col.gif) repeat-y top center;}
+	background: #CACACA url(../i/bg.png) no-repeat top center;
+/*	background: transparent url(../i/12_col.gif) repeat-y top center;	
+*/}
 	
 body {
 	color: #313131;
@@ -60,7 +61,7 @@ body {
 				margin-left: 0px;
 			}
 			
-			#header #inner ul#nav li:last-child {
+			#header #inner ul#nav li.last {   /*check for last-child IE workarounds if any*/
 				margin-right: 0px;
 			}
 
@@ -94,7 +95,7 @@ body {
 					display:block;
 					height: 22px;
 					width: 177;
-					background: url("../i/search-bg.png") no-repeat scroll right top transparent;
+					background: url(../i/search-bg.png) no-repeat scroll right top transparent;
 		}
 	
 			#header #inner #search #search-entry {
@@ -113,62 +114,72 @@ body {
 				background: none;
 				border: none;
 				text-indent:-9999px;
+				cursor:pointer;
 			}
 
-		}
+
+			#header #inner #search #search-submit:active{
+				cursor: wait; /* Shows the wait cursor on click */
+			}
 
 
 
 	/*	--- SLIDER --- */
 
-	#slideshow {
+	#slider {
 		clear: both;
-		/* padding-top: 50px; */ /* this padding doesn't work, next one does */
 	}
-	
-		#slideshow-container {
+
+		#slider-scroll {
 			padding-top: 50px;
 			width: 820px;
+			height: 147px;
 			margin: 0 auto;
-			vertical-align: top;
+			overflow: hidden;
 		}
 		
-				#slide h3 {
+		    #content-holder {
+		      width: 3280px;
+		      height: 129px;
+		    }
+		
+				.slide {
+					width: 820px;
+					height: 129px;
+					float: left;
+				}
+		
+				.slide h3 {
 					font-size: 20px;
 					line-height: 20px; /* aligned with image */
 					color: #2197b1;
 					margin-bottom: 9px; /* ps ruler measures 17px */
 				}
 			
-				#slide h4 {
+				.slide h4 {
 					font-size: 17px;
 					color: #313131;
 					margin-bottom: 7px; /* ps ruler measures 20px */
 				}
 			
-				#slide p {
+				.slide p {
 					font-size: 14px;
 					line-height: 25px;
 					margin-bottom: 10px;
 				}
 			
-				#slide img {
+				.slide img {
 					float: right;
-					margin-left: 140px;
+					margin-left: 135px;  /* con 140px se agrega una linea de texto mas en Safari */
 				}
 
 
-        .slider {
-        	margin-top: 10px;
-            width: 820px;
-            height: 17px;
-/*
-            margin-top: 140px;
-            margin-left: 5px;
-            padding: 1px;
-*/
-            position: relative;
-            background: url(../i/hr-line.png) repeat-x center;
+		.scroller {
+			width: 820px;
+			height: 17px;
+			position: absolute;
+			top: 198px;
+			background: url(../i/hr-line.png) repeat-x center;
         }
         
         .handle {
@@ -177,24 +188,10 @@ body {
             height: 17px;
             width: 17px;
             top: 0;
+			left: 35px;   /*get rid of this positioning crap, won't be useful when implementing jquery stuff*/
             background: url(../i/handle.png) no-repeat;
             z-index: 100;
         }
-
-        .slider span {
-/*
-            color: #bbb;
-            font-size: 80%;
-*/
-            cursor: pointer;
-            position: absolute;
-            z-index: 110;
-            top: 3px;
-        }
-
-
-
-
 
 
 
@@ -233,14 +230,15 @@ body {
 	
 	#main {
 		overflow: hidden;
-		padding-top: 50px;
+		padding-top: 46px; /*Yeah, weird - should be 50px (guess it's the slider shit)*/
+		margin: 0 auto;
 	}
 	
 	#main h4 {
 		font-size: 17px;
 		color: #3d3d3d;
 		float: left;
-		padding: 15px 0 0 23px;
+		
 	}
 
 	#main span a {
@@ -250,9 +248,13 @@ body {
 		color: #707070;
 		text-decoration: none;
 		float: right;
-		padding-right: 43px;
-		padding-top: 15px;
+/*		padding-right: 30px;
+		padding-top: 15px;*/
 	}
+	
+	#main #col3 span a {
+/*		padding-right: 10px;
+*/	}
 
 	#main p {
 		clear: both;
@@ -285,19 +287,32 @@ body {
 			line-height: 25px;
 		}
 
-/*	#main #col_1, #col_2, #col_3 {
-		background: url('../i/col-bg.png') no-repeat;
-	}*/
+		
+		#main #cols1 {
+			background: url('../i/3col-bg.png') no-repeat center top;
+		}
+	#main #col1, #col2, #col3 {
+		/*background: url('../i/col-bg.png') no-repeat;*/
+		float: left;
+		padding: 15px 0 0 23px;
+	}	
 
-	#main #col_1 {
-		background: url('../i/col-bg.png') no-repeat -10px 0px;
+	
+	#main #col1 {
+		margin-right: 85px;    
 	}
 
-	#main #col_1 p, #col_2 p, #col_3 p,
-	#main #col_2 ul {
-		padding-top: -20px;
-		padding-right: 30px;
-		padding-left: 23px;
+	#main #col2 {
+		margin-right: 85px;
+	}	
+
+	#main #col1 p, #main #col2 p, #main #col3 p,
+	#main #col1 ul, #main #col2 ul, #main #col3 ul {
+		width: 233px;
+	}
+
+	#main #col3 {
+		margin-right: 0;
 	}
 	
 	#main h2 {
@@ -306,12 +321,17 @@ body {
 		color: #2197b1;
 	}
 	
-	#main #who , #main #vision {
-		padding-top: 50px;
+	#main #cols2 {
+		clear: both;
+		padding-top: 20px;
+		padding-bottom: 43px;
 	}
-	
+
+
+		
 	#main #who p, #main #vision p {
 		color: #515151;
+		
 	}
 	
 	#main #who blockquote {
@@ -321,8 +341,12 @@ body {
 	}
 	
 	#main #vision {
-		background: url('../i/vr-line.png') repeat-y 0 100%;
-		padding-left: 50px;
+		background: url('../i/vr-line.png') repeat-y 30px 100%;
+		padding-left: 80px;
+	}
+	
+	#main #vision p.last {   /*check for last-child IE workarounds if any*/
+		margin-bottom: 0;
 	}
 		
 
@@ -338,6 +362,16 @@ body {
 
 #footer {
 	padding-top: 24px;
+	overflow: hidden;
+}
+
+
+#footer #box2 {
+	margin-left: 35px;
+}
+
+#footer #box3 {
+	margin-left: -15px;
 }
 
 
@@ -355,6 +389,16 @@ body {
 	font-size: 14px;
 	line-height: 25px;
 	color: #ffffff;	
+	max-width: 240px;
+}
+
+#footer #box3 img {
+	float: left;
+	margin-right: 36px;
+}
+
+#footer #box3 img.last {
+	margin-right: 0px;
 }
 
 
