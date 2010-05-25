@@ -1,8 +1,9 @@
 .DS_Store
-psd/*
-pdf/*
-i/.DS_Store
-slick_accessible_SS/
-slider-gallery/
-slider_example/
 
+_no_jQuery_version/*
+
+Finished-w-jQuery/slider_sourcefiles/*
+
+Finished-w-jQuery/i/.DS_Store
+
+Finished-w-jQuery/.DS_Store

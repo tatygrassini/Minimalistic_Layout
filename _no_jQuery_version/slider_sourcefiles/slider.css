@@ -1,0 +1,11 @@
+h2 { text-align:center; font:normal 150% Georgia; }
+#sliderContent { width:650px; margin:auto; padding:0 50px 50px; background-color:#ebebeb; border:1px solid #898989; }
+.viewer { width:607px; height:343px; margin:0 auto 40px; padding:1px; overflow:hidden; position:relative; border:1px solid #898989; }
+.content-conveyor { width:610px; height:335px; position:relative; }
+.item { width:304px; float:left; font-family:Tahoma; text-align:center; background-color:#ebebeb; }
+.item h2 { font-size:100%; margin:10px 0; }
+.item dl { margin:10px 0; }
+.item dt, .item dd { float:left; width:149px; text-align:right; margin:0; font-size:70%; }
+.item dt { font-weight:bold; margin-right:5px; }
+.item dd { text-align:left; }
+.item img { border:1px solid #898989; background-color:#ffffff; padding:1px; }

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery UI Slider</title>
+    <link rel="stylesheet" type="text/css" href="jqueryui/css/smoothness/jquery-ui-1.7.2.custom.css">
+    <link rel="stylesheet" type="text/css" href="slider.css">
+  </head>
+  <body>
+    <div id="sliderContent" class="ui-corner-all">	
+      <h2>Some well known galactic nebulae and their vital statistics</h2>		
+      <div class="viewer ui-corner-all">
+        <div class="content-conveyor ui-helper-clearfix">
+
+          <div class="item">
+            <h2>Omega Nebula</h2>
+            <img src="images/omega.jpg" alt="Omega Nebula">
+            <dl class="details ui-helper-clearfix">
+              <dt>Distance from Earth:</dt><dd>5000 - 6000 lightyears</dd>
+              <dt>Diameter:</dt><dd>15 Lightyears</dd>
+              <dt>Mass:</dt><dd>800 solar masses</dd>
+              <dt>Catalogue number:</dt><dd>M17 / NGC6618</dd>
+              <dt>Discovered in:</dt><dd>1764</dd>
+              <dt>Discoverer:</dt><dd>Philippe Loys de Ch&eacute;seaux</dd>
+            </dl>
+          </div>
+
+          <div class="item">
+            <h2>Rosette Nebula</h2>
+            <img src="images/rosette.jpg" alt="Rosette Nebula">
+            <dl class="details ui-helper-clearfix">
+              <dt>Distance from Earth:</dt><dd>5200 lightyears</dd>
+              <dt>Diameter:</dt><dd>130 lightyears</dd>
+              <dt>Mass:</dt><dd>10'000 solar masses</dd>
+              <dt>Catalogue number:</dt><dd>NGC2244</dd>
+              <dt>Discovered in:</dt><dd>1690</dd>
+              <dt>Discoverer:</dt><dd>John Flamsteed</dd>
+            </dl>
+          </div>
+          
+          <div class="item">
+            <h2>Ring Nebula</h2>
+            <img src="images/ring.jpg" alt="Ring Nebula">
+            <dl class="details ui-helper-clearfix">
+              <dt>Distance from Earth:</dt><dd>2300 lightyears</dd>
+              <dt>Diameter:</dt><dd>2.6 lightyears</dd>
+              <dt>Mass:</dt><dd>1.2 solar masses</dd>
+              <dt>Catalogue number:</dt><dd>M57 / NGC6822</dd>
+              <dt>Discovered in:</dt><dd>1886</dd>
+              <dt>Discoverer:</dt><dd>Antoine Darquier de Pellepoix</dd>
+            </dl>
+          </div>
+
+          <div class="item">
+            <h2>Tarantula Nebula</h2>
+            <img src="images/tarantula.jpg" alt="Tarantula Nebula">
+            <dl class="details ui-helper-clearfix">
+              <dt>Distance from Earth:</dt><dd>180'000 lightyears</dd>
+              <dt>Diameter:</dt><dd>1000 lightyears</dd>
+              <dt>Mass:</dt><dd>450'000 solar masses</dd>
+              <dt>Catalogue number:</dt><dd>NGC2070</dd>
+              <dt>Discovered in:</dt><dd>1751</dd>
+              <dt>Discoverer:</dt><dd>Nicolas Louis de Lacaille</dd>
+            </dl>
+          </div>
+
+          <div class="item">
+            <h2>Triangulum Nebula</h2>
+            <img src="images/triangulum.jpg" alt="Triangulum Nebula">
+            <dl class="details ui-helper-clearfix">
+              <dt>Distance from Earth:</dt><dd>2'700'000 lightyears</dd>
+              <dt>Diameter:</dt><dd>1500 lightyears</dd>
+              <dt>Mass:</dt><dd>15 - 60 solar masses</dd>
+              <dt>Catalogue number:</dt><dd>NGC604</dd>
+              <dt>Discovered in:</dt><dd>1784</dd>
+              <dt>Discoverer:</dt><dd>William Herschel</dd>
+            </dl>
+          </div>
+
+          <div class="item">
+            <h2>Eagle Nebula</h2>
+            <img src="images/eagle.jpg" alt="Eagle Nebula">
+            <dl class="details ui-helper-clearfix">
+              <dt>Distance from Earth:</dt><dd>6500 lightyears</dd>
+              <dt>Diameter:</dt><dd>9.6 lightyears</dd>
+              <dt>Mass:</dt><dd>12'500 solar masses</dd>
+              <dt>Catalogue number:</dt><dd>M16 / NGC6611</dd>
+              <dt>Discovered in:</dt><dd>1746</dd>
+              <dt>Discoverer:</dt><dd>Jean-Philippe de Cheseaux</dd>
+            </dl>
+          </div>
+
+          <div class="item">
+            <h2>Crab Nebula</h2>
+            <img src="images/crab.jpg" alt="Crab Nebula">
+            <dl class="details ui-helper-clearfix">
+              <dt>Distance from Earth:</dt><dd>1400 lightyears</dd>
+              <dt>Diameter:</dt><dd>11 lightyears</dd>
+              <dt>Mass:</dt><dd>10 solar masses</dd>
+              <dt>Catalogue number:</dt><dd>M1 / NGC1952</dd>
+              <dt>Discovered in:</dt><dd>1731</dd>
+              <dt>Discoverer:</dt><dd>John Bevis</dd>
+            </dl>
+          </div>
+          
+        </div>
+      </div>
+      <div id="slider"></div>
+    </div>
+    <script type="text/javascript" src="jqueryui/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="jqueryui/js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        
+		//vars
+		var conveyor = $(".content-conveyor", $("#sliderContent")),
+		item = $(".item", $("#sliderContent"));
+		
+		//set length of conveyor
+		conveyor.css("width", item.length * parseInt(item.css("width")));
+				
+        //config
+        var sliderOpts = {
+		  max: (item.length * parseInt(item.css("width"))) - parseInt($(".viewer", $("#sliderContent")).css("width")),
+          slide: function(e, ui) { 
+            conveyor.css("left", "-" + ui.value + "px");
+          }
+        };
+
+        //create slider
+        $("#slider").slider(sliderOpts);
+      });
+    </script>
+  </body>
+</html>
