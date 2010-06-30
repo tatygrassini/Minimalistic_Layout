@@ -1,5 +1,0 @@
-/*iepngfix*/
-
-img, div, a, input { 
-	behavior: url(css/iepngfix/iepngfix.htc);
-	}
