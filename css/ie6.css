@@ -1,5 +1,17 @@
-/*iepngfix*/
+#header img {
+	behavior: url(../css/iepngfix.htc);
+}
 
-img, div, a, input { 
-	behavior: url(css/iepngfix/iepngfix.htc);
-	}
+body { font-size: 62.5% }
+
+#header #header-block ul#nav li a {
+	font-size: 10.6em;
+	letter-spacing: -0.7px;
+	color: red;
+}
+
+/* grouping all IE doble margin bugs */
+
+#header-block {
+	display: inline;
+}
