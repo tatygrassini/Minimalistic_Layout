@@ -9,7 +9,7 @@
 			
 			<link rel="stylesheet" href="css/style.css" type="text/css" />
 			
-			<!--[if lte IE 6]><![endif]-->
+			<!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" /><![endif]-->
 			
 			<!--[if lt IE 8]>
 			<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
@@ -27,9 +27,9 @@
 						<div id="header-block">
 							
 							<ul id="nav">
-								<li class="selected"><a href="#">home</a>
+								<li class="first"><a href="#" class="selected">home</a>
 									<ul>
-										<li><a href="#">login</a></li>     
+										<li class="first"><a href="#">login</a></li>     
 										<li><a href="#">news</a></li>   
 										<li><a href="#">latest work</a></li>
 									</ul>
@@ -37,14 +37,12 @@
 								<li><a href="#">about us</a></li>
 								<li><a href="#">services</a></li>
 								<li><a href="#">portfolio</a></li>
-								<li><a href="#" class="last">contact</a></li>
+								<li class="last"><a href="#">contact</a></li>
 							</ul>
 
 							<div id="search">
-								<p id="search-input">
 									<input id="search-entry" type="text" value="Search..." name="s" id="s" onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}">
-									<input id="search-submit"  type="submit" value="Go">
-								</p>
+									<input id="search-submit" type="submit" value="Go">
 							</div>
 						
 						</div><!-- header-block -->
@@ -194,7 +192,7 @@
 				<div id="bottom" class="container_12">
 
 					<ul>
-						<li class="selected"><a href="#">Home</a></li>
+						<li class="first"><a href="#" class="selected">Home</a></li>
 						<li><a href="#">About Us</a></li>
 						<li><a href="#">Services</a></li>
 						<li><a href="#">Portfolio</a></li>

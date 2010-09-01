@@ -4,9 +4,6 @@
 @import url('../jqueryui/css/smoothness/jquery-ui-1.7.2.custom.css');
 @import url('slider.css');
 
-
-/* 1em == 16px */
-
 html {
 	background: #CACACA url(../i/bg.jpg) no-repeat top center;
 }
@@ -55,6 +52,7 @@ body {
 			display: block;
 			position: absolute;
 			top: 67px;
+			left: 0;
 			}
 
 			#header #header-block ul#nav li {
@@ -66,11 +64,6 @@ body {
 					margin-left: 0px;
 				}
 			
-				#header #header-block ul#nav li.last {   /*check for last-child IE workarounds if any*/
-					margin-right: 0px;
-				}
-
-		
 					#header #header-block ul#nav li a {
 						text-decoration: none;
 						color: #525252;
@@ -79,7 +72,7 @@ body {
 						letter-spacing: -0.7px;
 					}
 				
-					#header #header-block ul#nav li.selected a {
+					#header #header-block ul#nav li a.selected {
 						text-decoration: underline;
 					}
 				
@@ -94,17 +87,14 @@ body {
 
 	#header #header-block #search {
 		float: right;
+		display:block;
+		height: 22px;
+		width: 177;
+		background: url(../i/search-bg.png) no-repeat scroll right top transparent;
 	}
-			
-		#header #header-block #search p#search-input {
-					display:block;
-					height: 22px;
-					width: 177;
-					background: url(../i/search-bg.png) no-repeat scroll right top transparent;
-		}
 	
 			#header #header-block #search #search-entry {
-				margin-left: 15px;
+				padding: 3px 0 0 15px;
 				width: 127px;
 				background: none;
 				border:none;
@@ -118,8 +108,8 @@ body {
 				height: 22px;
 				background: none;
 				border: none;
-				text-indent:-9999px;
-				cursor:pointer;
+				text-indent: -999%;
+				cursor: pointer;
 			}
 
 
@@ -144,124 +134,105 @@ body {
 		margin: 0 auto;
 	}
 	
-	#main h4 {
-		font-size: 17px;
-		color: #3d3d3d;
-		float: left;
-		
-	}
-
-	#main span a {
-		font-size: 14px;
-		font-weight: bold;
-		line-height: 25px;
-		color: #707070;
-		text-decoration: none;
-		float: right;
-/*		padding-right: 30px;
-		padding-top: 15px;*/
-	}
-	
-	#main #col3 span a {
-/*		padding-right: 10px;
-*/	}
-
-	#main p {
-		clear: both;
-		font-size: 14px;
-		line-height: 25px;
-		color: #434141;
-	}
-
-	#main span, #main blockquote {
-		color: #2197b1;
-		font-weight: bold;
-	}
-
-		#main span.signature {
-			font-size: 17px;
-			letter-spacing: -0.7px;
-			float: right;
-		}
-
-	#main li {
-		clear: both;
-		list-style: none;
-		margin-left: 0px;
-	}
-
-		#main li a {
-			text-decoration: none;
-			color: #2197b1;
-			font-size: 14px;
-			line-height: 25px;
-		}
-
-		
 		#main #cols1 {
-			background: url('../i/3col-bg.png') no-repeat center top;
+			background: url('../i/3col-bg.png') no-repeat scroll center top transparent;
 		}
-	#main #col1, #col2, #col3 {
-		/*background: url('../i/col-bg.png') no-repeat;*/
-		float: left;
-		padding: 15px 0 0 23px;
-	}	
-
-	
-	#main #col1 {
-		margin-right: 85px;    
-	}
-
-	#main #col2 {
-		margin-right: 85px;
-	}	
-
-	#main #col1 p, #main #col2 p, #main #col3 p,
-	#main #col1 ul, #main #col2 ul, #main #col3 ul {
-		width: 233px;
-	}
-
-	#main #col3 {
-		margin-right: 0;
-	}
-	
-	#main h2 {
-		font-size: 27px;
-		line-height: 20px;
-		color: #2197b1;
-	}
-	
-	#main #cols2 {
-		clear: both;
-		padding-top: 20px;
-		padding-bottom: 43px;
-	}
-
-
-		
-	#main #who p, #main #vision p {
-		color: #515151;
-		
-	}
-	
-	#main #who blockquote {
-		border-left: 15px solid #2197b1;
-		display: block;
-		padding-left: 16px;
-	}
-	
-	#main #vision {
-		background: url('../i/vr-line.png') repeat-y 30px 100%;
-		padding-left: 80px;
-	}
-	
-	#main #vision p.last {   /*check for last-child IE workarounds if any*/
-		margin-bottom: 0;
-	}
-		
-
-
-
+			
+			#main #cols1 #col1, #main #cols1 #col2, #main #cols1 #col3 {
+				float: left;
+				padding: 15px 0 0 21px;
+			}
+			
+				#main #cols1 #col1, #main #cols1 #col2 {
+					margin-right: 85px;
+				}
+				
+				#main #col3 {
+					margin-right: 0;
+				}
+			
+					#main #cols1 p,
+					#main #cols1 #col2 ul {
+						width: 235px;
+					}
+			
+						#main #cols1 h4 {
+							font-size: 17px;
+							color: #3d3d3d;
+							float: left;
+						}
+					
+						#main #cols1 span a {
+							font-size: 14px;
+							font-weight: bold;
+							line-height: 25px;
+							color: #707070;
+							text-decoration: none;
+							float: right;
+						}
+					
+						#main #cols1 p {
+							clear: both;
+							font-size: 14px;
+							line-height: 25px;
+							color: #434141;
+						}
+					
+						#main #cols1 span, #main blockquote {
+							color: #2197b1;
+							font-weight: bold;
+						}
+					
+							#main #cols1 span.signature {
+								font-size: 17px;
+								letter-spacing: -0.7px;
+								float: right;
+							}
+					
+						#main li {
+							clear: both;
+							list-style: none;
+							margin-left: 0px;
+						}
+					
+							#main li a {
+								text-decoration: none;
+								color: #2197b1;
+								font-size: 14px;
+								line-height: 25px;
+							}
+							
+			#main #cols2 {
+				clear: both;
+				padding-top: 20px;
+				padding-bottom: 43px;
+			}
+			
+				#main h2 {
+					font-size: 27px;
+					line-height: 20px;
+					color: #2197b1;
+				}
+				
+				#main #who p, #main #vision p {
+					color: #515151;
+					
+				}
+				
+				#main #who blockquote {
+					border-left: 15px solid #2197b1;
+					display: block;
+					padding-left: 16px;
+				}
+				
+				#main #vision {
+					background: url('../i/vr-line.png') repeat-y 30px 100%;
+					padding-left: 80px;
+				}
+				
+				#main #vision p.last {   /*check for last-child IE workarounds if any*/
+					margin-bottom: 0;
+				}
 
 	/*	--- FOOTER (and FOOTER-WRAP, also) --- */
 
@@ -353,7 +324,7 @@ body {
 			letter-spacing: -0.7px;
 		}
 
-			#bottom li.selected a {
+			#bottom li a.selected {
 				color: #207687;
 			}
 

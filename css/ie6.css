@@ -1,17 +1,39 @@
-#header img {
-	behavior: url(../css/iepngfix.htc);
+/* png fixes */
+
+#header img,
+#header #header-block #search,
+#main #cols1,
+#main #vision,
+#footer img { behavior: url(css/iepngfix.htc); }
+
+
+#header #header-block ul#nav li.first { margin-left: 0; }
+
+#header #header-block {
+  height: auto !important; /* min-height fix */
+  height: 95px;
 }
 
-body { font-size: 62.5% }
 
-#header #header-block ul#nav li a {
-	font-size: 10.6em;
-	letter-spacing: -0.7px;
-	color: red;
+#header #header-block #search #search-entry {
+	padding: 0 0 3px 15px;
+}
+			
+	
+#footer p, strong {
+	max-width: 240px;
 }
 
-/* grouping all IE doble margin bugs */
+/* double margin fix */
 
-#header-block {
+#bottom ul,
+#bottom p,
+#main #col1, #main #col2 {
 	display: inline;
+}
+
+#bottom li.first {
+	border-left: none;
+	margin-left: 0px;
+	padding-left: 0px;
 }
