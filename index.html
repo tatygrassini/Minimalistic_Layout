@@ -7,7 +7,77 @@
 			
 			<title>Minimalistic</title>
 			
-			<link rel="stylesheet" href="https://raw.github.com/tatygrassini/Minimalistic_Layout/master/css/style.css" type="text/css" />
+			<style media="screen">
+				@import url('https://raw.github.com/tatygrassini/Minimalistic_Layout/master/css/reset.css');
+				@import url('https://raw.github.com/tatygrassini/Minimalistic_Layout/master/css/960.css');
+				@import url('https://raw.github.com/tatygrassini/Minimalistic_Layout/master/css/text.css');
+				@import url('https://github.com/tatygrassini/Minimalistic_Layout/blob/master/jqueryui/css/smoothness/jquery-ui-1.7.2.custom.css');
+				@import url('https://raw.github.com/tatygrassini/Minimalistic_Layout/master/css/slider.css');
+				html{background:#CACACA url(https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/bg.jpg) no-repeat top center;}
+				body{color:#313131;font-family:Arial,Verdana,sans-serif;}
+				#container{position:relative;padding-top:50px;}
+				#header{margin-top:0;position:relative;height:150px;overflow:hidden;}
+				#header img{float:left;}
+				#header #header-block{background:transparent url(https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/hr-line.png) repeat-x center;min-height:95px;position:relative;float:right;width:640px;}
+				/* --- NAVIGATION --- */
+				#header #header-block ul#nav{list-style-position:outside;display:block;float:left;}
+				#header #header-block ul#nav ul{display:block;position:absolute;top:67px;left:0;}
+				#header #header-block ul#nav li{display:inline;margin:0 10px;}
+				#header #header-block ul#nav li:first-child{margin-left:0px;}
+				#header #header-block ul#nav li a{text-decoration:none;color:#525252;font-size:17px;font-weight:bold;letter-spacing:-0.7px;}
+				#header #header-block ul#nav li a.selected{text-decoration:underline;}
+				#header #header-block ul#nav li.selected ul li a{color:#787878;text-decoration:none;}
+				/* --- SEARCH --- */
+				#header #header-block #search{float:right;display:block;height:22px;width:177;background:url(https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/search-bg.png) no-repeat scroll right top transparent;}
+				#header #header-block #search #search-entry{padding:3px 0 0 15px;width:127px;background:none;border:none;color:#e7e7e7;font-size:14px;font-weight:bold;}
+				#header #header-block #search #search-submit{margin-left:5px;width:30px;height:22px;background:none;border:none;text-indent:-999%;cursor:pointer;}
+				#header #header-block #search #search-submit:active{cursor:wait;/* Shows the wait cursor on click */}
+				/* --- SLIDER --- */
+				#featured{clear:both;padding-top:50px;}
+				/* --- MAIN --- */
+				#main{overflow:hidden;padding-top:46px;/*Yeah,weird - should be 50px (guess it's the slider shit)*/
+				margin:0 auto;}
+				#main #cols1{background:url('https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/3col-bg.png') no-repeat scroll center top transparent;}
+				#main #cols1 #col1,#main #cols1 #col2,#main #cols1 #col3{float:left;padding:15px 0 0 21px;}
+				#main #cols1 #col1,#main #cols1 #col2{margin-right:85px;}
+				#main #col3{margin-right:0;}
+				#main #cols1 p,
+				#main #cols1 #col2 ul{width:235px;}
+				#main #cols1 h4{font-size:17px;color:#3d3d3d;float:left;}
+				#main #cols1 span a{font-size:14px;font-weight:bold;line-height:25px;color:#707070;text-decoration:none;float:right;}
+				#main #cols1 p{clear:both;font-size:14px;line-height:25px;color:#434141;}
+				#main #cols1 span,#main blockquote{color:#2197b1;font-weight:bold;}
+				#main #cols1 span.signature{font-size:17px;letter-spacing:-0.7px;float:right;}
+				#main li{clear:both;list-style:none;margin-left:0px;}
+				#main li a{text-decoration:none;color:#2197b1;font-size:14px;line-height:25px;}
+				#main #cols2{clear:both;padding-top:20px;padding-bottom:43px;}
+				#main h2{font-size:27px;line-height:20px;color:#2197b1;}
+				#main #who p,#main #vision p{color:#515151;}
+				#main #who blockquote{border-left:15px solid #2197b1;display:block;padding-left:16px;}
+				#main #vision{background:url('https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/vr-line.png') repeat-y 30px 100%;padding-left:80px;}
+				#main #vision p.last{/*check for last-child IE workarounds if any*/
+				margin-bottom:0;}
+				/* --- FOOTER (and FOOTER-WRAP,also) --- */
+				#footer-wrap{background:#333333 url('https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/footer-bg.png') repeat-x;}
+				#footer{padding-top:24px;overflow:hidden;}
+				#footer #box2{margin-left:35px;}
+				#footer #box3{margin-left:-15px;}
+				#footer h3{text-transform:uppercase;font-size:19px;line-height:20px;color:#2197b1;background:url('https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/footer-hr-line.png') repeat-x 0 100%;padding-bottom:16px;margin-right:60px;}
+				#footer p,strong{font-size:14px;line-height:25px;color:#ffffff;max-width:240px;}
+				#footer #box3 img{float:left;margin-right:36px;}
+				#footer #box3 img.last{margin-right:0px;}
+				/* --- BOTTOM (and BOTTOM-WRAP,also) --- */
+				#bottom-wrap{/* background-color:red;*/
+				border-top:1px solid #ffffff;}
+				#bottom{padding-top:50px;}
+				#bottom ul{overflow:hidden;float:left;margin-left:10px;}
+				#bottom li{float:left;list-style:none;margin-left:13px;padding-left:13px;border-left:1px solid #313131;}
+				#bottom li:first-child{border-left:none;margin-left:0px;padding-left:0px;}
+				#bottom li a{text-decoration:none;color:#525252;font-size:16px;letter-spacing:-0.7px;}
+				#bottom li a.selected{color:#207687;}
+				#bottom p{float:right;margin-right:10px;font-size:16px;letter-spacing:-0.7px;}
+				#bottom a{color:#207687;text-decoration:none;}
+			</style>
 			
 			<!--[if lte IE 6]><link rel="stylesheet" href="https://raw.github.com/tatygrassini/Minimalistic_Layout/master/css/ie6.css" type="text/css" /><![endif]-->
 			
@@ -58,35 +128,35 @@
 							<div class="content-conveyor ui-helper-clearfix">
 								
 								<div class="item">
-									<img src="i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
+									<img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
 									<h3>Handstand</h3>
 									<h4>Photoshop design</h4>
 									<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
 								</div><!-- item -->
 							
 								<div class="item">
-									<img src="i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
+									<img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
 									<h3>Handstand</h3>
 									<h4>Photoshop design</h4>
 									<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
 								</div><!-- item -->
 							
 								<div class="item">
-									<img src="i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
+									<img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
 									<h3>Handstand</h3>
 									<h4>Photoshop design</h4>
 									<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
 								</div><!-- item -->
 							
 								<div class="item">
-									<img src="i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
+									<img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
 									<h3>Handstand</h3>
 									<h4>Photoshop design</h4>
 									<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
 								</div><!-- item -->
 							
 								<div class="item">
-									<img src="i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
+									<img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/slide-pic1.png" alt="Handstand" width="340" height="129"/>
 									<h3>Handstand</h3>
 									<h4>Photoshop design</h4>
 									<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
@@ -177,10 +247,10 @@
 					
 					<div id="box3" class="grid_4">
 						<h3>Social Networking</h3>
-						<a href="http://www.facebook.com/"><img src="i/facebook.png" alt="facebook" width="48" height="48"/></a>
-						<a href="http://www.flickr.com/"><img src="i/flickr.png" alt="flickr" width="48" height="48"/></a>
-						<a href="http://www.youtube.com/"><img src="i/youtube.png" alt="youtube" width="48" height="48"/></a>
-						<a href="http://www.twitter.com/"><img class="last" src="i/twitter.png" alt="twitter" width="48" height="48"/></a>
+						<a href="http://www.facebook.com/"><img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/facebook.png" alt="facebook" width="48" height="48"/></a>
+						<a href="http://www.flickr.com/"><img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/flickr.png" alt="flickr" width="48" height="48"/></a>
+						<a href="http://www.youtube.com/"><img src="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/i/youtube.png" alt="youtube" width="48" height="48"/></a>
+						<a href="http://www.twitter.com/"><img class="https://github.com/tatygrassini/Minimalistic_Layout/raw/master/last" src="i/twitter.png" alt="twitter" width="48" height="48"/></a>
 					</div>
 					
 				</div><!-- footer -->
@@ -205,8 +275,8 @@
 	
 			</div><!-- bottom-wrap -->
 			
-			<script type="text/javascript" src="jqueryui/js/jquery-1.3.2.min.js"></script>
-			<script type="text/javascript" src="jqueryui/js/jquery-ui-1.7.2.custom.min.js"></script>
+			<script type="text/javascript" src="https://github.com/tatygrassini/Minimalistic_Layout/tree/master/jqueryui/js/jquery-1.3.2.min.js"></script>
+			<script type="text/javascript" src="https://github.com/tatygrassini/Minimalistic_Layout/tree/master/jqueryui/js/jquery-ui-1.7.2.custom.min.js"></script>
 			<script type="text/javascript">
 				$(function() {
 
