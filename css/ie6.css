@@ -1,39 +1,9 @@
-/* png fixes */
-
-#header img,
-#header #header-block #search,
-#main #cols1,
-#main #vision,
-#footer img { behavior: url(css/iepngfix.htc); }
-
-
-#header #header-block ul#nav li.first { margin-left: 0; }
-
-#header #header-block {
-  height: auto !important; /* min-height fix */
-  height: 95px;
-}
-
-
-#header #header-block #search #search-entry {
-	padding: 0 0 3px 15px;
-}
-			
-	
-#footer p, strong {
-	max-width: 240px;
-}
-
-/* double margin fix */
-
-#bottom ul,
-#bottom p,
-#main #col1, #main #col2 {
-	display: inline;
-}
-
-#bottom li.first {
-	border-left: none;
-	margin-left: 0px;
-	padding-left: 0px;
-}
+#header img,#header #header-block #search,#main #cols1,#main #vision,#footer img{behavior:url(css/iepngfix.htc);}
+#header #header-block{/* background:transparent url(../i/hr-line.png) repeat-x center 10%;*/}
+#header #header-block ul#nav li.first{margin-left:0;}
+#header #header-block{height:auto!important;}
+#header #header-block #search #search-entry{padding:0 0 3px 15px;}
+#footer p,strong{max-width:240px;}
+#bottom ul,#bottom p,#main #col1,#main #col2{display:inline-block;}
+#bottom ul{margin-left:5px;}
+#bottom li.first{border-left:none;}
